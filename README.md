@@ -1,6 +1,7 @@
 # Módulo 3 - Frameworks
 ## Entrega: Réplica de una página web.
 *Hecho por: Sofía Castañeda Mosquera y Juliana Vélez Torrente.* 
+
 *Web 2021-1 · 8 abril*
 
 Sitio web original: [Revista Anfibia](http://revistaanfibia.com/)
