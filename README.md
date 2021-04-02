@@ -1,6 +1,6 @@
 # Módulo 3 - Frameworks
 
-<img src="https://github.com/sofiacastaneda/web-replica/blob/main/portadareadme.pn" width="300">
+<img src="https://github.com/sofiacastaneda/web-replica/blob/main/portadareadme.png" width="300">
 
 
 ## Entrega: Réplica de una página web.
