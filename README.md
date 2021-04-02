@@ -8,9 +8,9 @@
 
 *Web 2021-1 · 8 abril*
 
-Sitio web original: [Revista Anfibia](http://revistaanfibia.com/)
+  - Sitio web original: [Revista Anfibia](http://revistaanfibia.com/)
 
-Sitio web hecho por nosotras: [Link](#)
+  - Sitio web hecho por nosotras: [Link](#)
 
 # Ejercicio:
 >**Definición u objetivo:** Al finalizar el módulo el estudiante comprenderá cómo funciona una herramienta CSS Grid Layout. Estará en capacidad de apropiar los componentes y construirá una réplica de unas secciones de una página web con sus características de estilo y su funcionalidad responsive.​
