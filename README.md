@@ -1,6 +1,7 @@
 # Módulo 3 - Frameworks
 
-![Imagen de nuestro sitio](https://github.com/sofiacastaneda/web-replica/blob/main/portadareadme.png)
+<img src="https://github.com/sofiacastaneda/web-replica/blob/main/portadareadme.pn" width="300">
+
 
 ## Entrega: Réplica de una página web.
 *Hecho por: Sofía Castañeda Mosquera y Juliana Vélez Torrente.* 
