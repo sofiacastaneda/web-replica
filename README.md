@@ -1,6 +1,6 @@
 # Módulo 3 - Frameworks
 
-![Imagen de nuestro sitio](https://octodex.github.com/images/yaktocat.png)
+![Imagen de nuestro sitio](https://github.com/sofiacastaneda/web-replica/blob/main/portadareadme.png)
 
 ## Entrega: Réplica de una página web.
 *Hecho por: Sofía Castañeda Mosquera y Juliana Vélez Torrente.* 
