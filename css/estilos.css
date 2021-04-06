@@ -2,15 +2,83 @@
 /* CSS Document */
 
 /******************/
-/*CLASSES SECCIÓN 1*//*Hechas por:*/
+/*CLASES SECCIÓN 1*//*Hechas por: Sofía*/ 
+/*ENCABEZADO*/
 
+/*Para el div del encabezado*/
+.divmenupagina{
+/*background-color: aqua;*/
+padding: 0px;
+margin: 0px;
+overflow-x: hidden;		
+}
+
+/*Navbar estilo anfibia*/
+.menuanfibia{
+background-color: #000000;
+color: #FFFFFF;	
+text-align: center;
+height: 70px;
+}
+
+/*Para modificar el ícono cuando colapsa el navbar*/
+/*cambia el color de fondo*/
+.hamburguesaanfibia.navbar-toggler-icon {
+/*Se modificó el color y el stroke-weight directamente desde el link*/	
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='3.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+/*cambia el color del borde*/
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255,255,255);
+} 
+
+/*Para los items del menú*/
+.textomenu{
+color: #FFFFFF !important;	
+font-family: 'Abhaya Libre', serif;
+font-size: 103%;	
+}
+
+.textomenu:active{
+color: #FFFFFF !important;	
+}
+
+/*camnio color hover*/
+.textomenu:hover{
+color: #333333	!important;
+	/*animación para que haya fade-in en el cambio de color*/
+   -webkit-transition-duration: 0.4s;
+   -moz-transition-duration: 0.4s;
+   -o-transition-duration: 0.4s;
+   transition-duration: 0.4s;	
+}
+
+/*Aquí se usan filtros CSS porque el svg está insertado con <img> y no con <span>, que si permite modificar el color directamente.*/
+.svganfibia:hover{
+filter: invert(0.4) sepia(0) saturate(1) hue-rotate(0deg) brightness(0.5);
+mx: 10px;
+	/*Animación para homogenizar estilo*/
+	-webkit-transition-duration: 0.4s;
+   -moz-transition-duration: 0.4s;
+   -o-transition-duration: 0.4s;
+   transition-duration: 0.4s;
+}
+
+.rayitamenu{
+  border-left: 1px solid white;
+  height: 30px;
+  /*position: absolute;*/
+  left: 50%;
+  margin-left: 5px;
+  margin-right: 20px;
+}
 
 /*AQUÍ ACABA SECCIÓN 1*/
 /******************/
 
 
 /******************/
-/*CLASSES SECCIÓN 2*//*Hechas por:*/
+/*CLASES SECCIÓN 2*//*Hechas por: Sofía*/
 
 
 /*AQUÍ ACABA SECCIÓN 2*/
@@ -18,7 +86,7 @@
 
 
 /******************/
-/*CLASSES SECCIÓN 3*//*Hechas por:*/
+/*CLASES SECCIÓN 3*//*Hechas por:*/
 
 
 
@@ -27,7 +95,7 @@
 
 
 /******************/
-/*CLASSES SECCIÓN 4*//*Hechas por:*/
+/*CLASES SECCIÓN 4*//*Hechas por:*/
 
 
 
