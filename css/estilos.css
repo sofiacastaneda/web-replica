@@ -1,11 +1,21 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/*body {
+    overflow-x: hidden !important;
+}
+.container-fluid {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}*/
+
+
 /******************/
 /*CLASES SECCIÓN 1*//*Hechas por: Sofía*/ 
 /*ENCABEZADO*/
 
-/*Para el div del encabezado*/
+/*NAVBAR*/
+/*Para el div del encabezado navbar*/
 .divmenupagina{
 /*background-color: aqua;*/
 padding: 0px;
@@ -72,6 +82,39 @@ mx: 10px;
   margin-left: 5px;
   margin-right: 20px;
 }
+/*FIN NAVBAR*/
+
+/*CARROUSEL*/
+
+.contenedorcarrusel{
+overflow: hidden;
+max-height: 500px;
+}
+
+/*div reel*/
+.reeldefotos{
+/*height: 324px;*/
+height: 100%;
+/*position: relative;
+overflow: hidden;
+width: 100%;*/	
+}
+
+/*fotos del reel*/
+.fotoreel{
+max-height: 500px;
+}
+
+/*Para hacer que los indicadores del slide sean redondos*/
+.carousel-indicators li{
+  border-radius: 50% !important;
+  width: 10px;
+  height: 10px;
+  margin-left: 15px;
+  margin-right: 15px;	
+}
+/*FIN CARROUSEL*/
+
 
 /*AQUÍ ACABA SECCIÓN 1*/
 /******************/
@@ -79,6 +122,32 @@ mx: 10px;
 
 /******************/
 /*CLASES SECCIÓN 2*//*Hechas por: Sofía*/
+
+/*Fila encabezado galería: crónicas*/
+.filarosada{
+	background-color: #FFE7E7;
+	height: 48px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	/*overflow: hidden;*/
+}
+/*título crónicas*/
+.titulocronicas{
+color: #000000;	
+font-family: 'Playfair Display SC', serif;
+font-weight: 900;
+font-size: 110%;	
+}
+
+/*GALERÍA ARTÍCULOS*/
+
+.divarticulo{
+min-height: 450px;
+}
+
+.imgarticulogal{
+}
 
 
 /*AQUÍ ACABA SECCIÓN 2*/
