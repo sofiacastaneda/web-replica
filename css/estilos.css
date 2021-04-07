@@ -87,22 +87,34 @@ mx: 10px;
 /*CARROUSEL*/
 
 .contenedorcarrusel{
-overflow: hidden;
-max-height: 500px;
+	
 }
 
 /*div reel*/
 .reeldefotos{
+/*overflow: hidden;*/
+/*max-height: 500px;*/
+/*height: 100vh;*/
+/*height: 90vh;*/
+	
 /*height: 324px;*/
-height: 100%;
+/*height: 100%;*/
+/*min-height: 100vh;*/	
+/*min-height: 90vh;*/	
 /*position: relative;
 overflow: hidden;
 width: 100%;*/	
+	
 }
 
-/*fotos del reel*/
+/*Fotos del reel*/
 .fotoreel{
-max-height: 500px;
+ max-width: 100%;
+ max-height: 100%;
+ object-fit: cover;	
+/*este pedacito de código hace MAGIA*/
+/*logra que la imagen del carrusel grande siempre se ajuste a la ventana <3 una maravilla*/
+ height: calc(100vh - 70px); /*se restan los 70px del navbar*/		
 }
 
 /*Para hacer que los indicadores del slide sean redondos*/
@@ -143,6 +155,107 @@ width: 40px;
 .carousel-control-next-icon:hover{
 filter: invert(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(1.2);
 }
+
+/*Títulos artículos*/
+.containertextos{
+padding-left: 15%;
+padding-right: 15%;	
+background: rgba(0, 0, 0, 0.5);			
+}
+
+.pretitulocarrusel{
+ font-family: 'DM Serif Text', serif;	
+}
+
+.titulararticulocarrusel{
+font-family: 'Anton', sans-serif;
+font-size: 500%;
+}
+
+.creditosartcarrusel{
+ font-family: 'DM Serif Text', serif;		
+}
+
+.span.tab-space {padding-left:5em;}
+
+.fotografoarticulo{
+color: #FFFFFF;
+text-decoration: none;	
+}
+
+.fotografoarticulo:hover{
+color: #FFFFFF;
+text-decoration: none;	
+opacity: 0.2;
+}
+
+/*PARA HACER LA TIPOGRAFÍA RESPONSIVE*/
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+    .pretitulocarrusel{
+	font-size: 140%;		
+}
+	
+	.titulararticulocarrusel {
+    font-size: 320%;
+}	
+	
+	.creditosartcarrusel{
+	font-size: 120%;	
+	}
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) { 
+    .pretitulocarrusel{
+	font-size: 140%;	
+  }
+	
+  .titulararticulocarrusel {
+ font-size: 380%;
+   }	
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {     
+	.pretitulocarrusel{
+}
+  .titulararticulocarrusel {
+   font-size: 500%;
+   }	
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+	  .pretitulocarrusel{
+}
+	
+  .titulararticulocarrusel {
+  font-size: 500%;
+  } 	  
+}
+
+/*.text-responsive {
+  font-size: calc(100% + 1vw + 1vh);	
+}*/
+
+.carousel-caption  {
+  /*esto centra el título del slide*/
+  top: 50% !important;
+  transform: translateY(-50%) !important;	
+  bottom: initial !important;	
+  color: #fff;
+  text-align: center;
+}
+
+/*background negro semitransparente que oculta la imagen hasta que se haga hover */
+.overlayimagen{
+background: rgba(0, 0, 0, 0.5);	
+z-index: 5000;	
+}
+
+
 
 /*FIN CARROUSEL*/
 
