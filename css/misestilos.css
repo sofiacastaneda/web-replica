@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+
+/******************/
+/*CLASSES SECCIÓN 3*//*Hechas por:*/
+
+
+
+/*AQUÍ ACABA SECCIÓN 3*/
+/******************/
+
+
+/******************/
+/*CLASSES SECCIÓN 4*//*Hechas por:*/
+
+
+
+.arriba
+{background-color:#ffe7e8; color:#ffe7e8}
+
+
+/* Se modificó la estética del footer para cumplir con la de la página: el color del fonto, las listas, las tipografías y sus colores */
+
+.footer
+{ background-color:#ffe7e8; font-family: 'Abhaya Libre', serif; }
+
+.footer2
+{background-color: #000000; font-family: 'Abhaya Libre', serif; color: #949292; font-size: 13px; text-align: center}
+
+
+
+.links
+{list-style: none}
+
+
+
+.boton
+{text-align: center}
+
+
+
+.btn
+{background-color: transparent; border: #ffe7e8;  }
+
+
+
+.btn-sm2
+{background-color: #000000}
+
+/* Color del texto de las anclas a negro */
+
+a
+{color: black}
+
+
+.link
+{color: darkgrey}
+
+/* Se quitó el borde de los cards */
+
+.card
+{ border: 0}
+
+/* Se escogieron las tipografīas de los títulos de los cards según la estética de la página oriignal*/
+
+.card-title
+{
+font-family: 'Anton', sans-serif;
+text-align: center;
+font-size: 30px; margin-top: auto; border: none}
+
+/* Se escogió la tipografía de los textos de los cards */
+
+.card-text
+{font-family: 'Abhaya Libre', serif; border: none}
+
+
+/*Color del hover de las anclas*/
+
+a:hover {
+  color: #A4A4A4;
+  text-decoration: none; opacity: 80;
+}
+
+a:not([href]) {
+  color: #949090;
+  text-decoration: none;
+}
+
+a:not([href]):hover {
+  color: inherit;
+	text-decoration: none;}
+
+/* Intento de hacer las imágenes responsive*/
+
+a:hover
+{ 
+    color: #A4A4A4;
+    text-decoration: none; opacity: 80;
+    transition: opacity .2s ease-out;
+	-webkit-transition: opacity .2s ease-out;
+    cursor: pointer;}
+
+/*AQUÍ ACABA SECCIÓN 4*/
+/******************/
