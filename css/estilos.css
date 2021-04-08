@@ -371,8 +371,6 @@ font-size: 110%;
 }
 
 
-
-
 /*IMAGEN DE LOS ARTÍCULOS*/
 
 /*div que contiene todo el media, se ajusta al de la cuadrícula*/
@@ -396,15 +394,20 @@ max-height: 100%;
 margin-left: 50%;
 transform: translateX(-50%);	
 z-index: -3;	
+/*aplicar filtro oscuro a la imagen*/
+filter: invert(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(0.5);
 }
 
-/*hay un fondo negro semitrasnparente encima de cada imagen, para facilitar la lectura*/
+/*cuando se haga hover sobre la imagen, quitar filtro*/
+.imgarticulogal:hover{
+ filter: none;
+}
+
+/*hay un fondo negro semitransparente encima de cada imagen, para facilitar la lectura*/
 .overlayimagen{
 background-color: rgba(0,0,0, 1);
 z-index: 1000;
 }
-
-
 
 /*TEXTOS DE LOS ARTÍCULOS*/
 /*los tamaños los ajusta el media query*/
@@ -431,41 +434,10 @@ font-family: 'Anton', sans-serif;
   color: #FFFFFF;	
 }
 
-/*al hacer hover, ocultar texto y overlay, revelar imagen*/
+/*al hacer hover, ocultar texto*/
 .containertextosgaleria:hover{
-}
-
-/*Link al artículo*/
-.linkgaleriaarticulo{
-text-decoration: none;
-color: #FFFFFF;
-}
-
-.linkgaleriaarticulo:active{
-text-decoration: none;
-color: #FFFFFF;
-}
-
-.linkgaleriaarticulo:hover{
-text-decoration: none;
-/*color: #FFFFFF;*/
-color: transparent;
-	
-}
-
-.creditoslinkgaleria{
-text-decoration: none;
-color: #FFFFFF;	
-}
-
-.creditoslinkgaleria:active{
-text-decoration: none;
-color: #FFFFFF;	
-}
-
-.creditoslinkgaleria:hover{
-text-decoration: none;
 color: transparent;	
+cursor: pointer;	
 }
 
 
@@ -512,7 +484,7 @@ max-height: 115px;
 
 
 /******************/
-/*CLASES SECCIÓN 3*//*Hechas por:*/
+/*CLASES SECCIÓN 3*//*Hechas por: Juliana*/
 
 
 
@@ -521,7 +493,7 @@ max-height: 115px;
 
 
 /******************/
-/*CLASES SECCIÓN 4*//*Hechas por:*/
+/*CLASES SECCIÓN 4*//*Hechas por: Juliana*/
 
 
 
