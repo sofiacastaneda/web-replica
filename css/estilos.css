@@ -1,306 +1,11 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/*body {
-    overflow-x: hidden !important;
-}
-.container-fluid {
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-}*/
+
 
 
 /******************/
-/*CLASES SECCIÓN 1*//*Hechas por: Sofía*/ 
-/*ENCABEZADO*/
-
-/*NAVBAR*/
-/*Para el div del encabezado navbar*/
-.divmenupagina{
-/*background-color: aqua;*/
-padding: 0px;
-margin: 0px;
-overflow-x: hidden;		
-}
-
-/*Navbar estilo anfibia*/
-.menuanfibia{
-background-color: #000000;
-color: #FFFFFF;	
-text-align: center;
-height: 70px;
-}
-
-/*Para modificar el ícono cuando colapsa el navbar*/
-/*cambia el color de fondo*/
-.hamburguesaanfibia.navbar-toggler-icon {
-/*Se modificó el color y el stroke-weight directamente desde el link*/	
-background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='3.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-/*cambia el color del borde*/
-.custom-toggler.navbar-toggler {
-  border-color: rgb(255,255,255);
-} 
-
-/*Para los items del menú*/
-.textomenu{
-color: #FFFFFF !important;	
-font-family: 'Abhaya Libre', serif;
-font-size: 103%;	
-}
-
-.textomenu:active{
-color: #FFFFFF !important;	
-}
-
-/*camnio color hover*/
-.textomenu:hover{
-color: #333333	!important;
-	/*animación para que haya fade-in en el cambio de color*/
-   -webkit-transition-duration: 0.4s;
-   -moz-transition-duration: 0.4s;
-   -o-transition-duration: 0.4s;
-   transition-duration: 0.4s;	
-}
-
-/*Aquí se usan filtros CSS porque el svg está insertado con <img> y no con <span>, que si permite modificar el color directamente.*/
-.svganfibia:hover{
-filter: invert(0.4) sepia(0) saturate(1) hue-rotate(0deg) brightness(0.5);
-mx: 10px;
-	/*Animación para homogenizar estilo*/
-	-webkit-transition-duration: 0.4s;
-   -moz-transition-duration: 0.4s;
-   -o-transition-duration: 0.4s;
-   transition-duration: 0.4s;
-}
-
-.rayitamenu{
-  border-left: 1px solid white;
-  height: 30px;
-  /*position: absolute;*/
-  left: 50%;
-  margin-left: 5px;
-  margin-right: 20px;
-}
-/*FIN NAVBAR*/
-
-/*CARROUSEL*/
-
-.contenedorcarrusel{
-	
-}
-
-/*div reel*/
-.reeldefotos{
-/*overflow: hidden;*/
-/*max-height: 500px;*/
-/*height: 100vh;*/
-/*height: 90vh;*/
-	
-/*height: 324px;*/
-/*height: 100%;*/
-/*min-height: 100vh;*/	
-/*min-height: 90vh;*/	
-/*position: relative;
-overflow: hidden;
-width: 100%;*/	
-	
-}
-
-/*Fotos del reel*/
-.fotoreel{
- max-width: 100%;
- max-height: 100%;
- object-fit: cover;	
-/*este pedacito de código hace MAGIA*/
-/*logra que la imagen del carrusel grande siempre se ajuste a la ventana <3 una maravilla*/
- height: calc(100vh - 70px); /*se restan los 70px del navbar*/		
-}
-
-/*Para hacer que los indicadores del slide sean redondos*/
-.carousel-indicators li{
-  border-radius: 50% !important;
-  width: 10px;
-  height: 10px;
-  margin-left: 15px;
-  margin-right: 15px;	
-}
-
-/*Personalizar los CONTROLES del carrusel*/
-
-/*FLECHA IZQUIERDA*/
-.carousel-control-prev-icon{
-/*esto quita la imagen default y deja que se vea mi svg*/	
-background-image: none !important;	
-/*modificar el tamaño para que se vea como el original*/	
-height: 40px;
-width: 40px;	
-}
-
-/*modificar el color en hover*/
-.carousel-control-prev-icon:hover{
-filter: invert(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(1.2);
-}
-
-/*FLECHA DERECHA*/
-.carousel-control-next-icon{
-/*esto quita la imagen default y deja que se vea mi svg*/		
-background-image: none !important;
-/*modificar el tamaño para que se vea como el original*/		
-height: 40px;
-width: 40px;	
-}
-
-/*modificar el color en hover*/
-.carousel-control-next-icon:hover{
-filter: invert(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(1.2);
-}
-
-/*Títulos artículos*/
-.containertextos{
-padding-left: 15%;
-padding-right: 15%;	
-background: rgba(0, 0, 0, 0.5);			
-}
-
-.pretitulocarrusel{
- font-family: 'DM Serif Text', serif;	
-}
-
-.titulararticulocarrusel{
-font-family: 'Anton', sans-serif;
-font-size: 500%;
-}
-
-.creditosartcarrusel{
- font-family: 'DM Serif Text', serif;		
-}
-
-.span.tab-space {padding-left:5em;}
-
-.fotografoarticulo{
-color: #FFFFFF;
-text-decoration: none;	
-}
-
-.fotografoarticulo:hover{
-color: #FFFFFF;
-text-decoration: none;	
-opacity: 0.2;
-}
-
-/*PARA HACER LA TIPOGRAFÍA RESPONSIVE*/
-
-/* Small devices (landscape phones, 544px and up) */
-@media (min-width: 544px) {  
-    .pretitulocarrusel{
-	font-size: 140%;		
-}
-	
-	.titulararticulocarrusel {
-    font-size: 320%;
-}	
-	
-	.creditosartcarrusel{
-	font-size: 120%;	
-	}
-}
- 
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) { 
-    .pretitulocarrusel{
-	font-size: 140%;	
-  }
-	
-  .titulararticulocarrusel {
- font-size: 380%;
-   }	
-}
- 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {     
-	.pretitulocarrusel{
-}
-  .titulararticulocarrusel {
-   font-size: 500%;
-   }	
-}
- 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-	  .pretitulocarrusel{
-}
-	
-  .titulararticulocarrusel {
-  font-size: 500%;
-  } 	  
-}
-
-/*.text-responsive {
-  font-size: calc(100% + 1vw + 1vh);	
-}*/
-
-.carousel-caption  {
-  /*esto centra el título del slide*/
-  top: 50% !important;
-  transform: translateY(-50%) !important;	
-  bottom: initial !important;	
-  color: #fff;
-  text-align: center;
-}
-
-/*background negro semitransparente que oculta la imagen hasta que se haga hover */
-.overlayimagen{
-background: rgba(0, 0, 0, 0.5);	
-z-index: 5000;	
-}
-
-
-
-/*FIN CARROUSEL*/
-
-
-/*AQUÍ ACABA SECCIÓN 1*/
-/******************/
-
-
-/******************/
-/*CLASES SECCIÓN 2*//*Hechas por: Sofía*/
-
-/*Fila encabezado galería: crónicas*/
-.filarosada{
-	background-color: #FFE7E7;
-	height: 48px;
-	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 5px;
-	/*overflow: hidden;*/
-}
-/*título crónicas*/
-.titulocronicas{
-color: #000000;	
-font-family: 'Playfair Display SC', serif;
-font-weight: 900;
-font-size: 110%;	
-}
-
-/*GALERÍA ARTÍCULOS*/
-
-.divarticulo{
-min-height: 450px;
-}
-
-.imgarticulogal{
-}
-
-
-
-/*AQUÍ ACABA SECCIÓN 2*/
-/******************/
-
-
-/******************/
-/*CLASES SECCIÓN 3*//*Hechas por:*/
+/*CLASSES SECCIÓN 3*//*Hechas por:*/
 
 
 
@@ -309,9 +14,95 @@ min-height: 450px;
 
 
 /******************/
-/*CLASES SECCIÓN 4*//*Hechas por:*/
+/*CLASSES SECCIÓN 4*//*Hechas por:*/
 
 
+
+.arriba
+{background-color:#ffe7e8; color:#ffe7e8}
+
+
+/* Se modificó la estética del footer para cumplir con la de la página: el color del fonto, las listas, las tipografías y sus colores */
+
+.footer
+{ background-color:#ffe7e8; font-family: 'Abhaya Libre', serif; }
+
+.footer2
+{background-color: #000000; font-family: 'Abhaya Libre', serif; color: #949292; font-size: 13px; text-align: center}
+
+
+
+.links
+{list-style: none}
+
+
+
+.boton
+{text-align: center}
+
+
+
+.btn
+{background-color: transparent; border: #ffe7e8;  }
+
+
+
+.btn-sm2
+{background-color: #000000}
+
+/* Color del texto de las anclas a negro */
+
+a
+{color: black}
+
+
+.link
+{color: darkgrey}
+
+/* Se quitó el borde de los cards */
+
+.card
+{ border: 0}
+
+/* Se escogieron las tipografīas de los títulos de los cards según la estética de la página oriignal*/
+
+.card-title
+{
+font-family: 'Anton', sans-serif;
+text-align: center;
+font-size: 30px; margin-top: auto; border: none}
+
+/* Se escogió la tipografía de los textos de los cards */
+
+.card-text
+{font-family: 'Abhaya Libre', serif; border: none}
+
+
+/*Color del hover de las anclas*/
+
+a:hover {
+  color: #A4A4A4;
+  text-decoration: none; opacity: 80;
+}
+
+a:not([href]) {
+  color: #949090;
+  text-decoration: none;
+}
+
+a:not([href]):hover {
+  color: inherit;
+	text-decoration: none;}
+
+/* Intento de hacer las imágenes responsive*/
+
+a:hover
+{ 
+    color: #A4A4A4;
+    text-decoration: none; opacity: 80;
+    transition: opacity .2s ease-out;
+	-webkit-transition: opacity .2s ease-out;
+    cursor: pointer;}
 
 /*AQUÍ ACABA SECCIÓN 4*/
 /******************/
