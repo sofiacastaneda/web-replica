@@ -1,0 +1,501 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Garantizar que no haya scroll en x*/
+body {
+    overflow-x: hidden !important;
+	background-color: #000000;
+}
+.container-fluid {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/******************/
+/*CLASES SECCIÓN 1*//*Hechas por: Sofía*/ 
+/*ENCABEZADO*/
+
+/*NAVBAR*/
+/*Para el div del encabezado navbar*/
+.divmenupagina{
+padding: 0px;
+margin: 0px;
+overflow-x: hidden;		
+}
+
+/*Navbar estilo anfibia*/
+.menuanfibia{
+background-color: #000000;
+color: #FFFFFF;	
+text-align: center;
+height: 70px;
+}
+
+/*Para modificar el ícono cuando colapsa el navbar*/
+/*cambia el color de fondo*/
+.hamburguesaanfibia.navbar-toggler-icon {
+/*Se modificó el color y el stroke-weight directamente desde el link*/	
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='3.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+/*cambia el color del borde*/
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255,255,255);
+} 
+
+/*Para los items del menú*/
+.textomenu{
+color: #FFFFFF !important;	
+font-family: 'Abhaya Libre', serif;
+font-size: 100%;	
+}
+
+.textomenu:active{
+color: #FFFFFF !important;	
+}
+
+/*cambio color hover*/
+.textomenu:hover{
+color: #333333	!important;
+	/*animación para que haya fade-in en el cambio de color*/
+   -webkit-transition-duration: 0.4s;
+   -moz-transition-duration: 0.4s;
+   -o-transition-duration: 0.4s;
+   transition-duration: 0.4s;	
+}
+
+/*Aquí se usan filtros CSS porque el svg está insertado con <img> y no con <span>, que si permite modificar el color directamente.*/
+.svganfibia:hover{
+filter: invert(0.4) sepia(0) saturate(1) hue-rotate(0deg) brightness(0.5);
+mx: 10px;
+	/*Animación para homogenizar estilo*/
+	-webkit-transition-duration: 0.4s;
+   -moz-transition-duration: 0.4s;
+   -o-transition-duration: 0.4s;
+   transition-duration: 0.4s;
+}
+
+.rayitamenu{
+  border-left: 1px solid white;
+  height: 30px;
+  /*position: absolute;*/
+  left: 50%;
+  margin-left: 5px;
+  margin-right: 20px;
+}
+/*FIN NAVBAR*/
+
+/*CARROUSEL*/
+
+
+/*Fotos del reel*/
+.fotoreel {
+ max-width: 100%;
+ max-height: 100%;
+ object-fit: cover;	
+/*este pedacito de código hace MAGIA*/
+/*logra que la imagen del carrusel grande siempre se ajuste a la ventana <3 una maravilla*/
+ height: calc(100vh - 70px); /*se restan los 70px del navbar*/	
+ 
+/*este filtro oscurece la imagen*/	
+ filter: invert(0.0) sepia(0) saturate(1) hue-rotate(0deg) brightness(0.5);	/*background negro semitransparente que oculta la imagen hasta que se haga hover */	
+-webkit-filter:	invert(0.0) sepia(0) saturate(1) hue-rotate(0deg) brightness(0.5);
+}
+
+/*la imagen se aclara cuando se hace hover sobre el titulo y pretitulo*/	
+.fotoreel:hover{
+ filter: invert(0.0) sepia(0) saturate(1) hue-rotate(0deg) brightness(1);
+ -webkit-transition-duration: 0.4s;
+   -moz-transition-duration: 0.4s;
+   -o-transition-duration: 0.4s;
+   transition-duration: 0.4s;	
+}
+
+/*Para hacer que los indicadores del slide sean redondos*/
+.carousel-indicators li{
+  border-radius: 50% !important;
+  width: 10px;
+  height: 10px;
+  margin-left: 15px;
+  margin-right: 15px;	
+}
+
+/*Personalizar los CONTROLES del carrusel*/
+
+/*FLECHA IZQUIERDA*/
+.carousel-control-prev-icon{
+/*esto quita la imagen default y deja que se vea mi svg*/	
+background-image: none !important;	
+/*modificar el tamaño para que se vea como el original*/	
+height: 40px;
+width: 40px;	
+}
+
+/*modificar el color en hover*/
+.carousel-control-prev-icon:hover{
+filter: invert(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(1.2);
+}
+
+/*FLECHA DERECHA*/
+.carousel-control-next-icon{
+/*esto quita la imagen default y deja que se vea mi svg*/		
+background-image: none !important;
+/*modificar el tamaño para que se vea como el original*/		
+height: 40px;
+width: 40px;	
+}
+
+/*modificar el color en hover*/
+.carousel-control-next-icon:hover{
+filter: invert(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(1.2);
+}
+
+/*TITULARES ARTÍCULOS*/
+.containertextos{
+padding-left: 20%;
+padding-right: 20%;	
+/*background: rgba(0, 0, 0, 0.5);*/			
+}
+/*TIPOGRAFÍAS PERSONALIZADAS*/
+.pretitulocarrusel{
+ font-family: 'DM Serif Text', serif;	
+}
+
+.titulararticulocarrusel{
+font-family: 'Anton', sans-serif;
+font-size: 500%;
+}
+
+.creditosartcarrusel{
+ font-family: 'DM Serif Text', serif;		
+}
+
+.fotografoarticulo{
+color: #FFFFFF;
+text-decoration: none;	
+}
+/*el nombre del fotógrafo/autor se oscurece con hover*/
+.fotografoarticulo:hover{
+color: #FFFFFF;
+text-decoration: none;	
+opacity: 0.2;
+}
+
+/*PARA HACER LA TIPOGRAFÍA RESPONSIVE*/
+/*CUBRE CARRUSEL Y GALERÍA*/
+/*Se ajustan los tamaños de acuerdo a breaking points específicos*/
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+    
+	/*CARRUSEL*/
+	.pretitulocarrusel{font-size: 140%;}
+	.titulararticulocarrusel {font-size: 320%;}	
+	.creditosartcarrusel{font-size: 120%;}
+	
+	 /*GALERÍA ARTÍCULOS*/	
+    .pretituloarticulo{font-size: 100%;}
+    .titulocajaarticulo{}
+    .creditosarticulocaja{font-size: 100%;}		
+
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) { 
+    
+ /*CARRUSEL*/
+ .pretitulocarrusel{font-size: 140%;}
+ .titulararticulocarrusel {font-size: 380%;}
+	
+ /*GALERÍA ARTÍCULOS*/	
+.pretituloarticulo{font-size: 100%;}
+.titulocajaarticulo{}
+.creditosarticulocaja{font-size: 90%;}		
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	
+/*CARRUSEL*/
+.pretitulocarrusel{}
+.titulararticulocarrusel {font-size: 500%;}	
+
+/*GALERÍA ARTÍCULOS*/	
+.pretituloarticulo{font-size: 100%;}
+.titulocajaarticulo{}
+.creditosarticulocaja{font-size: 90%;}	
+	
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	
+/*CARRUSEL*/
+.pretitulocarrusel{}
+.titulararticulocarrusel {font-size: 500%;}
+
+/*GALERÍA ARTÍCULOS*/	
+.pretituloarticulo{font-size: 100%;}
+.titulocajaarticulo{}
+.creditosarticulocaja{font-size: 90%;}		
+	
+}
+
+/*otro método .text-responsive {
+  font-size: calc(100% + 1vw + 1vh);	
+}*/
+
+/*ALINEACIÓN Y EFECTOS DEL CARRUSEL*/
+
+.carousel-caption  {
+  /*esto centra el título del slide*/
+  top: 50% !important;
+  transform: translateY(-50%) !important;	
+  bottom: initial !important;	
+  color: #fff;
+  text-align: center;
+}
+
+/*que el texto desaparezca cuando se hace hover al título*/
+.carousel-caption:hover{ /*toca conectar esto al carousel inner*/
+  color: transparent !important;
+ -webkit-transition-duration: 0.4s;
+   -moz-transition-duration: 0.4s;
+   -o-transition-duration: 0.4s;
+   transition-duration: 0.4s;	
+opacity: 0;
+}
+
+/*FIN CARROUSEL*/
+
+
+/*AQUÍ ACABA SECCIÓN 1*/
+/******************/
+
+
+/******************/
+/*CLASES SECCIÓN 2*//*Hechas por: Sofía*/
+
+/*Fila encabezado galería: crónicas*/
+.filarosada{
+	background-color: #FFE7E7;
+	height: 48px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	overflow-y: hidden !important;
+}
+/*título crónicas*/
+.titulocronicas{
+color: #000000;	
+font-family: 'Playfair Display SC', serif;
+font-weight: 900;
+font-size: 110%;	
+}
+
+/*GALERÍA DE ARTÍCULOS*/
+
+/*este div permite que las cajas se muevan*/
+.galeriadearticulos{
+	display:flex;
+	flex-flow: wrap;
+}
+
+/*este div establece el tamaño de cada artículo*/
+.cajaarticulo{
+	flex: 1 0 33%;
+	/*border: 3px solid blue;*/
+	width: 30%;
+    padding-bottom : 30%;
+	
+	/*para que los div hijos se ajusten*/
+	overflow: hidden;
+    position: relative;
+}
+
+/*este media query ajusta la galeria de 3x3 a 2x2 cuando se cambia el tamaño de la pantalla*/
+@media screen and (max-width: 1030px){
+.cajaarticulo{
+	flex: 1 0 50%;
+	width: 50%;
+    padding-bottom : 50%;
+}
+		
+/*esto ajusta el artículo #9 cuando la matriz es de 2x6*/	
+.cajaarticulo:last-child{
+	flex: 0 0 50%;	
+	}	
+	
+}
+
+@media screen and (max-width: 638px){
+	/*esto hace que se vuelva una única columna*/
+	/*este BREAKING POINT no lo tiene bootstrap, por eso se añade extra*/
+	.cajaarticulo{
+	flex: 1 0 100%;
+	width: 100%;
+    padding-bottom : 100%;	
+	}	
+
+    /*con esto el último artículo ajusta su tamaño*/	
+    .cajaarticulo:last-child{
+	flex: 1 0 100%;	
+	}
+		
+	/*TIPOGRAFÍA GALERÍA ARTÍCULOS*/	
+    .pretituloarticulo{font-size: 100%;}
+    .titulocajaarticulo{}
+    .creditosarticulocaja{font-size: 100%;}	
+	
+	
+	/*REPSONSIVE PARA LOS ADS*/
+	/*para que quede un ad por encima del otro*/
+	.cajanuncio{
+	flex: 1 0 100%;
+	width: 100%;	
+    }
+	
+	/*crear el espacio vertical*/
+    .cajanuncio:first-child{
+	flex: 1 0 100%;
+	width: 100%;
+	padding-bottom: 30px;
+    }   
+	
+	.cajanuncio:last-child{
+	flex: 1 0 100%;
+	width: 100%;
+    }
+	
+	.espacioad{
+	/*se quita ese espacio intermedio*/	
+	}
+}
+
+
+/*IMAGEN DE LOS ARTÍCULOS*/
+
+/*div que contiene todo el media, se ajusta al de la cuadrícula*/
+.contenidocaja{
+position:absolute;
+text-align: center;
+/*width: 30%;    
+margin-bottom : 100%;*//*el margin bottom sirve para llenar la altura verticalmente y hacer que sea un cuadrado 1:1*/
+height: 100%;
+width: 100%;
+
+}
+
+/*centrar la imagen, hacerla ocupar 100% verticalmente, escalar sin deformar y "recortar" el excedente*/
+.imgarticulogal{
+background-size:cover;	
+float: left;
+overflow: hidden;
+max-width: auto;	
+max-height: 100%;
+margin-left: 50%;
+transform: translateX(-50%);	
+z-index: -3;	
+/*aplicar filtro oscuro a la imagen*/
+filter: invert(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(0.5);
+}
+
+/*cuando se haga hover sobre la imagen, quitar filtro*/
+.imgarticulogal:hover{
+ filter: none;
+}
+
+/*hay un fondo negro semitransparente encima de cada imagen, para facilitar la lectura*/
+.overlayimagen{
+background-color: rgba(0,0,0, 1);
+z-index: 1000;
+}
+
+/*TEXTOS DE LOS ARTÍCULOS*/
+/*los tamaños los ajusta el media query*/
+.pretituloarticulo{
+ font-family: 'DM Serif Text', serif;		
+}
+
+.titulocajaarticulo{
+font-family: 'Anton', sans-serif;
+}
+
+.creditosarticulocaja{
+ font-family: 'DM Serif Text', serif;			
+}
+
+/*esto alinea verticalmente la caja de textos, en cualquuier tamaño de pantalla, de acuerdo al div contenedor*/
+.containertextosgaleria{
+  text-align: center;
+  position: relative;
+  top: 0%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);	
+  color: #FFFFFF;	
+}
+
+/*al hacer hover, ocultar texto*/
+.containertextosgaleria:hover{
+color: transparent;	
+cursor: pointer;	
+}
+
+
+/*ÚLTIMA SECCIÓN: ANUNCIOS*/
+
+/*las imágenes son responsive y van en esquinas opuestas*/
+.imganuncio1{
+padding: 0px;
+max-height: 115px;			
+}
+
+.imganuncio2{
+/*max-height: 115px;*/
+padding: 0px;
+/*float: right;*/	
+max-height: 115px;				
+}
+
+/*contenedor grande*/
+.adsfinal{
+	display:flex;
+	flex-flow: wrap;
+}
+
+/*divs para las imágenes*/
+.cajanuncio{
+	flex: 1 0 48%;
+	width: 48%;
+	background-color: #FFFFFF;
+}
+
+/*div para el espacio*/
+.espacioad{
+   flex: 1 0 2%;
+   width: 2%;	
+   background-color: #FFFFFF;
+
+}
+
+
+
+/*AQUÍ ACABA SECCIÓN 2*/
+/******************/
+
+
+/******************/
+/*CLASES SECCIÓN 3*//*Hechas por: Juliana*/
+
+
+
+/*AQUÍ ACABA SECCIÓN 3*/
+/******************/
+
+
+/******************/
+/*CLASES SECCIÓN 4*//*Hechas por: Juliana*/
+
+
+
+/*AQUÍ ACABA SECCIÓN 4*/
+/******************/
