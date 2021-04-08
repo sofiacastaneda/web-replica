@@ -281,7 +281,7 @@ opacity: 0;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 5px;
-	/*overflow: hidden;*/
+	overflow-y: hidden !important;
 }
 /*título crónicas*/
 .titulocronicas{
